@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI can be used to reduce the risk of surgical complications from bleeding">
+  <meta name="author" content="Tom Boddaert">
+  <title>AI Reduces Risk of Surgical Complications</title>
+
+  <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .row>div {
+      text-align: center;
+    }
+
+    .covered-image {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .covered-image>img {
+      filter: blur(8px) opacity(60%);
+      pointer-events: none;
+    }
+
+    .covered-image::after {
+      content: "Warning: " attr(data-cover-reason) ".\a Click to reveal.";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: 0;
+      padding: 0;
+      white-space: pre;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+  <!-- Custom styles for this template -->
+  <link href="./template.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-light rounded">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./SelfDrivingCars.html">Self Driving Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./smartBandages.html">Smart Bandages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">AI Assisted Surgery</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="col-lg-8 mx-auto p-4 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+      <a href="" class="d-flex align-items-center text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img">
+          <title>Bootstrap</title>
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+            fill="currentColor"></path>
+        </svg>
+        <span class="fs-4">Good Things In Computing</span>
+      </a>
+    </header>
+
+    <main>
+      <h1>AI Reduces Risk of Surgical Complications</h1>
+      <p class="fs-5 col-md-8">An AI created by Dr. Amin Madani, a general surgeon at the Sprott Department of Surgery
+        at the University Health Network, Toronto, helps to identify tissue that is safe to dissect during surgery.</p>
+
+      <hr class="col-3 col-md-2 mb-5">
+
+      <p class="fs-5">
+        According to <a
+          href="https://www.who.int/teams/integrated-health-services/patient-safety/research/safe-surgery">research by
+          the World Health Organization</a>, 1 out of every 4 inpatients suffer complications during or after a surgery.
+        It can be difficult for a surgeon to identify safe areas of organ to dissect, especially when performing
+        Laparoscopy (keyhole surgery), where they can only see into the body via a camera and screen.
+        However, Dr Madani, inspired by the techniques used by top surgeons, thought an AI may be able to help visualise
+        the safe zones. He trained the AI on hundreds of hours of gallbladder surgeries, and feedback from expert
+        surgeons on where they would dissect, and where they thought a dissection may cause a bleed.
+        The AI highlights "go" and "no-go" areas of the surgical field for bisection, in green and red respectively; Dr.
+        Madani also has a version with a heatmap, showing how certain the AI is of safety.
+      </p>
+
+      <figure class="figure">
+        <div class="container">
+          <div class="row">
+            <div class="col-md my-4 covered-image" data-cover-reason="image of surgery">
+              <img src="./resources/images/surgeryai_zones.png" class="img-fluid col-lg-8 rounded float-left"
+                alt="go and no-go zones highlighted in a surgery.">
+            </div>
+            <div class="col-md my-4 covered-image" data-cover-reason="image of surgery">
+              <img src="./resources/images/surgeryai_heatmap.png" class="img-fluid col-lg-8 rounded float-right"
+                alt="The heatmap corresponding to the previous image.">
+            </div>
+          </div>
+        </div>
+        <figcaption class="figure-caption" style="max-width: 60%;">Laplante, Simon et al. “Validation of an artificial
+          intelligence platform for the guidance of safe laparoscopic cholecystectomy.” Surgical endoscopy,
+          10.1007/s00464-022-09439-9. 2 Aug. 2022, doi:10.1007/s00464-022-09439-9</figcaption>
+      </figure>
+
+      <p class="fs-5">
+        Although GoNoGoNet can currently only assist on gallbladder surgeries, the AI could recognise "go" and "no-go"
+        zones with 93-95% accuracy. This has the potential to significantly decrease the risk of major bile duct
+        injuries in Laparoscopic Cholecystectomies and certainly shows a promising proof of concept, which could be
+        applied toall kinds of surgical operations.
+
+        <a href="https://youtu.be/MmcW8JK1Qv4">Video of the AI highlighting a surgery video in real time.</a>
+      </p>
+    </main>
+    <footer class="pt-5 my-5 text-muted border-top">
+    </footer>
+  </div>
+
+  <script src="./resources/js/bootstrap.bundle.min.js"></script>
+  <script>
+    "use strict";
+
+    // Set preferred uncover behaviour
+    const imageUncoverer = uncover_all_images;
+
+
+    // Get all covered images
+    let coveredImages = document.getElementsByClassName("covered-image");
+
+    // Add the set uncover function to them
+    for (let el of coveredImages)
+      el.addEventListener("click", imageUncoverer);
+
+    // Uncover the clicked image
+    function uncover_image(ev) {
+      event.target.classList.remove("covered-image");
+      event.target.removeEventListener("click", uncover_image);
+    }
+
+    // Uncover all images
+    function uncover_all_images() {
+      while (coveredImages.length != 0) {
+        coveredImages[0].removeEventListener("click", uncover_all_images);
+        // The next line has the effect of popping the first element from the array
+        coveredImages[0].classList.remove("covered-image");
+      }
+    }
+  </script>
+
+</body>
+
+</html>
